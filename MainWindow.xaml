@@ -1,0 +1,56 @@
+<Window x:Class="Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Лабораторная работа 2"
+        Height="600" Width="900"
+        MinHeight="500" MinWidth="700"
+        ResizeMode="CanResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Выберите формулу:" FontSize="22" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <!-- Радио-кнопки -->
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <RadioButton x:Name="rb1" Content="y = a*x + b" GroupName="f" IsChecked="True" FontSize="18"/>
+            <RadioButton x:Name="rb2" Content="y = a*x^2 + b*x + c" GroupName="f" FontSize="18"/>
+            <RadioButton x:Name="rb3" Content="y = sin(x) + a" GroupName="f" FontSize="18"/>
+            <RadioButton x:Name="rb4" Content="y = ln(x + a)" GroupName="f" FontSize="18"/>
+            <RadioButton x:Name="rb5" Content="вариант 2: y = e^(a*x) + b*ln(x + c)" GroupName="f" FontSize="18"/>
+        </StackPanel>
+
+        <!-- Поля -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <TextBlock Text="a:" FontSize="18" Margin="0,0,5,0"/>
+            <TextBox x:Name="tbA" Width="80" Height="35" FontSize="16" Margin="0,0,15,0"/>
+            <TextBlock Text="b:" FontSize="18" Margin="0,0,5,0"/>
+            <TextBox x:Name="tbB" Width="80" Height="35" FontSize="16" Margin="0,0,15,0"/>
+            <TextBlock Text="c:" FontSize="18" Margin="0,0,5,0"/>
+            <TextBox x:Name="tbC" Width="80" Height="35" FontSize="16" Margin="0,0,15,0"/>
+            <TextBlock Text="x:" FontSize="18" Margin="0,0,5,0"/>
+            <TextBox x:Name="tbX" Width="80" Height="35" FontSize="16"/>
+        </StackPanel>
+
+        <!-- Кнопки (растягиваются на всю ширину) -->
+        <Grid Grid.Row="3" HorizontalAlignment="Stretch" Margin="100,0,100,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Content="Посчитать" Height="50" FontSize="18" Margin="0,0,0,10"
+                    Click="Button_Click" HorizontalAlignment="Stretch"/>
+            <Button Grid.Row="1" Content="Очистить" Height="50" FontSize="18"
+                    Click="Button_Clear" HorizontalAlignment="Stretch"/>
+        </Grid>
+
+        <!-- Результат -->
+        <TextBlock Grid.Row="4" x:Name="tbRes" FontSize="20" TextAlignment="Center"
+                   HorizontalAlignment="Center" Margin="0,20,0,0"/>
+    </Grid>
+</Window>
