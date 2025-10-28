@@ -1,42 +1,56 @@
 using System;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Lab2
 {
     public partial class MainWindow : Window
     {
-        Formula f = new Formula();
-
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Calc_Click(object sender, RoutedEventArgs e)
         {
-            double a = 0, b = 0, c = 0, x = 0, y = 0;
+            // Определяем, какой RadioButton выбран, и рассчитываем нужную формулу
 
-            if (tbA.Text != "") a = double.Parse(tbA.Text);
-            if (tbB.Text != "") b = double.Parse(tbB.Text);
-            if (tbC.Text != "") c = double.Parse(tbC.Text);
-            if (tbX.Text != "") x = double.Parse(tbX.Text);
+            if (Radio1.IsChecked.GetValueOrDefault())
+            {
+                double a = Convert.ToDouble(R1TextA.Text);
+                double f = Convert.ToDouble(R1ComboF.Text);
+                this.Title = "Ответ: " + Math.Sin(f * a).ToString("F");
+            }
 
-            if (rb1.IsChecked == true) y = f.Formula1(a, b, x);
-            if (rb2.IsChecked == true) y = f.Formula2(a, b, c, x);
-            if (rb3.IsChecked == true) y = f.Formula3(a, x);
-            if (rb4.IsChecked == true) y = f.Formula4(a, x);
-            if (rb5.IsChecked == true) y = f.Variant2(a, b, c, x);
+            if (Radio2.IsChecked.GetValueOrDefault())
+            {
+                double a = Convert.ToDouble(R2TextA.Text);
+                double b = Convert.ToDouble(R2TextB.Text);
+                double f = Convert.ToDouble(R2ComboF.Text);
+                this.Title = "Ответ: " + (Math.Cos(f * a) + Math.Sin(f * b)).ToString("F");
+            }
 
-            tbRes.Text = "Р РµР·СѓР»СЊС‚Р°С‚: " + y.ToString("F3");
-        }
+            if (Radio3.IsChecked.GetValueOrDefault())
+            {
+                double a = Convert.ToDouble(R3TextA.Text);
+                double b = Convert.ToDouble(R3TextB.Text);
+                double c = Convert.ToDouble(R3ComboC.Text);
+                double d = Convert.ToDouble(R3ComboD.Text);
+                this.Title = "Ответ: " + (c * a * a + d * b * b).ToString("F");
+            }
 
-        private void Button_Clear(object sender, RoutedEventArgs e)
-        {
-            tbA.Text = "";
-            tbB.Text = "";
-            tbC.Text = "";
-            tbX.Text = "";
-            tbRes.Text = "";
+            if (Radio4.IsChecked.GetValueOrDefault())
+            {
+                double a = Convert.ToDouble(R4TextA.Text);
+                double d = Convert.ToDouble(R4TextD.Text);
+                double c = Convert.ToDouble(R4ComboC.Text);
+                double res = 1;
+
+                for (int i = 0; i < d; i++)
+                    res = res * (c + a) + 1;
+
+                this.Title = "Ответ: " + res.ToString("F");
+            }
         }
     }
 }
