@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    public class Formula1
+    public class Formula3
     {
-        public static double Calculate(double a, double f)
+        public static double Calculate(double a, double b, double c, double d)
         {
-            return Math.Sin(f * a);
+            return c * a * a + d * b * b;
         }
     }
 }
