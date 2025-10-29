@@ -1,7 +1,9 @@
 using System;
+using System.Globalization;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Globalization;
+using System.Windows.Input;
 
 namespace Lab2
 {
@@ -104,6 +106,12 @@ namespace Lab2
                 MessageBox.Show($"Ошибка переключения темы:\n{ex.Message}",
                                 "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        // === Разрешаем только цифры, запятую и точку в TextBox ===
+        private void NumberOnlyInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !Regex.IsMatch(e.Text, @"[0-9.,]");
         }
     }
 }
