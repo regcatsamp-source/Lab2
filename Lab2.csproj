@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -7,13 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="formula1.png" />
+    <None Remove="formula2.png" />
+    <None Remove="formula3.png" />
+    <None Remove="formula4.png" />
+    <None Remove="formula5.png" />
     <None Remove="p1.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="formula1.png" />
+    <Resource Include="formula2.png" />
+    <Resource Include="formula3.png" />
+    <Resource Include="formula4.png" />
+    <Resource Include="formula5.png" />
     <Resource Include="p1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Formula1.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
 </Project>

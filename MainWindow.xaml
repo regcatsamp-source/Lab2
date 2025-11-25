@@ -11,23 +11,20 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <!-- Верхняя часть -->
         <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
             <StackPanel Margin="10">
 
-                <!-- === Формула 1 === -->
+                <!-- FORMULA 1 -->
                 <RadioButton IsChecked="True" Margin="5" Name="Radio1">
                     <StackPanel HorizontalAlignment="Center">
-                        <Image Source="C:\Users\dima\Desktop\Lab2-10\100.png"
+                        <Image Source="formula1.png"
                                Height="40" Margin="5"/>
                         <GroupBox Header="Параметры">
                             <WrapPanel HorizontalAlignment="Center" Margin="10,5">
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\a.png" Width="20" Height="20" Margin="5,0,5,0"/>
                                 <Label Content="a:" VerticalAlignment="Center"/>
                                 <TextBox Text="0.00" Name="R1TextA" MinWidth="70" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\f.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="f:" VerticalAlignment="Center"/>
+                                <Label Content="f:" VerticalAlignment="Center" Margin="15,0,5,0"/>
                                 <ComboBox Name="R1ComboF" SelectedIndex="0" MinWidth="70">
                                     <ComboBoxItem>4</ComboBoxItem>
                                     <ComboBoxItem>5</ComboBoxItem>
@@ -39,22 +36,19 @@
                     </StackPanel>
                 </RadioButton>
 
-                <!-- === Формула 2 === -->
+                <!-- FORMULA 2 -->
                 <RadioButton Margin="5" Name="Radio2">
                     <StackPanel HorizontalAlignment="Center">
-                        <Image Height="40" Source="C:\Users\dima\Desktop\Lab2-10\200.png" Margin="5"/>
+                        <Image Height="40" Source="/formula2.png" Margin="5"/>
                         <GroupBox Header="Параметры">
                             <WrapPanel HorizontalAlignment="Center" Margin="10,5">
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\a.png" Width="20" Height="20" Margin="5,0,5,0"/>
                                 <Label Content="a:" VerticalAlignment="Center"/>
                                 <TextBox Text="0.00" MinWidth="70" Name="R2TextA" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\b.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="b:" VerticalAlignment="Center"/>
+                                <Label Content="b:" VerticalAlignment="Center" Margin="15,0,5,0"/>
                                 <TextBox Text="0.00" MinWidth="70" Name="R2TextB" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\f.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="f:" VerticalAlignment="Center"/>
+                                <Label Content="f:" VerticalAlignment="Center" Margin="15,0,5,0"/>
                                 <ComboBox MinWidth="100" Name="R2ComboF">
                                     <ComboBoxItem>10</ComboBoxItem>
                                     <ComboBoxItem>20</ComboBoxItem>
@@ -65,29 +59,25 @@
                     </StackPanel>
                 </RadioButton>
 
-                <!-- === Формула 3 === -->
+                <!-- FORMULA 3 -->
                 <RadioButton Margin="5" Name="Radio3">
                     <StackPanel HorizontalAlignment="Center">
-                        <Image Source="C:\Users\dima\Desktop\Lab2-10\300.png" Height="40" Margin="5"/>
+                        <Image Source="/formula3.png" Height="40" Margin="5"/>
                         <GroupBox Header="Параметры">
                             <WrapPanel HorizontalAlignment="Center" Margin="10,5">
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\a.png" Width="20" Height="20" Margin="5,0,5,0"/>
                                 <Label Content="a:" VerticalAlignment="Center"/>
-                                <TextBox Text="0.00" MinWidth="50" Name="R3TextA" PreviewTextInput="NumberOnlyInput"/>
+                                <TextBox  MinWidth="50" Name="R3TextA" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\b.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="b:" VerticalAlignment="Center"/>
-                                <TextBox Text="0.00" MinWidth="50" Name="R3TextB" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="b:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  MinWidth="50" Name="R3TextB" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\c.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="c:" VerticalAlignment="Center"/>
+                                <Label Content="c:" VerticalAlignment="Center" Margin="15,0,5,0"/>
                                 <ComboBox MinWidth="50" SelectedIndex="0" Name="R3ComboC">
                                     <ComboBoxItem Content="0"/>
                                     <ComboBoxItem Content="1"/>
                                 </ComboBox>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\d.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="d:" VerticalAlignment="Center"/>
+                                <Label Content="d:" VerticalAlignment="Center" Margin="15,0,5,0"/>
                                 <ComboBox MinWidth="70" SelectedIndex="0" Name="R3ComboD">
                                     <ComboBoxItem Content="-1"/>
                                     <ComboBoxItem Content="0"/>
@@ -98,13 +88,12 @@
                     </StackPanel>
                 </RadioButton>
 
-                <!-- === Формула 4 === -->
+                <!-- FORMULA 4 -->
                 <RadioButton Margin="5" Name="Radio4">
                     <StackPanel HorizontalAlignment="Center">
-                        <Image Source="C:\Users\dima\Desktop\Lab2-10\400.png" Height="45" Margin="5"/>
+                        <Image Source="/formula4.png" Height="45" Margin="5"/>
                         <GroupBox Header="Параметры">
                             <WrapPanel HorizontalAlignment="Center" Margin="10,5">
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\c.png" Width="20" Height="20" Margin="5,0,5,0"/>
                                 <Label Content="c:" VerticalAlignment="Center"/>
                                 <ComboBox MinWidth="70" Name="R4ComboC" SelectedIndex="0">
                                     <ComboBoxItem Content="0"/>
@@ -112,47 +101,39 @@
                                     <ComboBoxItem Content="2"/>
                                 </ComboBox>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\d.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="d:" VerticalAlignment="Center"/>
-                                <TextBox Text="0.00" Width="70" Name="R4TextD" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="d:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  Width="70" Name="R4TextD" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\a.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="a:" VerticalAlignment="Center"/>
-                                <TextBox Text="0.00" Width="70" Name="R4TextA" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="a:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  Width="70" Name="R4TextA" PreviewTextInput="NumberOnlyInput"/>
                             </WrapPanel>
                         </GroupBox>
                     </StackPanel>
                 </RadioButton>
 
-                <!-- === Формула 5 === -->
+                <!-- FORMULA 5 -->
                 <RadioButton Margin="5" Name="Radio5">
                     <StackPanel HorizontalAlignment="Center">
-                        <Image Source="C:\Users\dima\Desktop\Lab2-10\500.png" Height="45" Margin="5"/>
+                        <Image Source="/formula5.png" Height="45" Margin="5"/>
                         <GroupBox Header="Параметры">
                             <WrapPanel HorizontalAlignment="Center" Margin="10,5">
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\t.png" Width="20" Height="20" Margin="5,0,5,0"/>
                                 <Label Content="t:" VerticalAlignment="Center"/>
-                                <TextBox Text="1,00" MinWidth="60" Name="R5TextT" PreviewTextInput="NumberOnlyInput"/>
+                                <TextBox  MinWidth="60" Name="R5TextT" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\x.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="x:" VerticalAlignment="Center"/>
-                                <TextBox Text="1,00" MinWidth="60" Name="R5TextX" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="x:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  MinWidth="60" Name="R5TextX" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\f.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="f:" VerticalAlignment="Center"/>
-                                <TextBox Text="1,00" MinWidth="60" Name="R5TextF" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="f:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  MinWidth="60" Name="R5TextF" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\y.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="y:" VerticalAlignment="Center"/>
-                                <TextBox Text="1,00" MinWidth="60" Name="R5TextY" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="y:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  MinWidth="60" Name="R5TextY" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\n.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="N:" VerticalAlignment="Center"/>
-                                <TextBox Text="3" MinWidth="40" Name="R5TextN" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="N:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  MinWidth="40" Name="R5TextN" PreviewTextInput="NumberOnlyInput"/>
 
-                                <Image Source="C:\Users\dima\Desktop\Lab2-10\k.png" Width="20" Height="20" Margin="15,0,5,0"/>
-                                <Label Content="K:" VerticalAlignment="Center"/>
-                                <TextBox Text="3" MinWidth="40" Name="R5TextK" PreviewTextInput="NumberOnlyInput"/>
+                                <Label Content="K:" VerticalAlignment="Center" Margin="15,0,5,0"/>
+                                <TextBox  MinWidth="40" Name="R5TextK" PreviewTextInput="NumberOnlyInput"/>
                             </WrapPanel>
                         </GroupBox>
                     </StackPanel>
@@ -160,7 +141,6 @@
             </StackPanel>
         </ScrollViewer>
 
-        <!-- Нижняя панель -->
         <Border Grid.Row="1" Background="#f3f3f3" Padding="10">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
